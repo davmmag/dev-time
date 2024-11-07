@@ -1,24 +1,71 @@
-import webpack from 'webpack';
-import { buildWebpack } from './config/buildWebpack.js';
-import path from 'path';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const webpack = require('webpack');
+const path = require('path');
 
-export default (env) => {
-  const paths = {
-    output: path.resolve(__dirname, 'build'),
-    entry: path.resolve(__dirname, 'src', 'main.js'),
-    html: path.resolve(__dirname, 'public', 'index.html'),
-    public: path.resolve(__dirname, 'public'),
-    src: path.resolve(__dirname, 'src'),
-  };
+module.exports = (env) => {
+  const isDev = env.mode === 'development';
 
-  const config = buildWebpack({
-    port: env.port ?? 3000,
+  const imageminPlugin = {
+
+  }
+
+  const assetLoader = {
+    test: /\.(png|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
+  }
+
+  const cssLoaderWithModules = {
+    loader: 'css-loader',
+  }
+
+  const scssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+      cssLoaderWithModules,
+      {
+        loader: 'sass-loader',
+        options: {
+          implementation: require("sass-embedded")
+        }
+      },
+    ]
+  }
+  return {
     mode: env.mode ?? 'development',
-    paths,
-  });
-  config.node = {
-    __dirname: true,
-  } 
-
-  return config;
-};
+    entry: path.resolve(__dirname, 'src', 'main.js'),
+    output: {
+      path: path.resolve(__dirname, 'build'),
+      filename: '[name].[contenthash].js',
+      clean: true,
+    },
+    module: {
+      rules: [
+        scssLoader,
+        assetLoader,
+      ]
+    },
+    
+    plugins: [
+      new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') }),
+      !isDev ? new MiniCssExtractPlugin({
+        filename: 'css/style.css',
+      }) : undefined,
+      new CopyPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, 'src', 'assets'), to: path.resolve('build', 'assets') },
+        ],
+      }),
+    ],
+    devServer: {
+      port:  3000,
+      open: true,
+      // если раздавать статику через nginx То надо делать проксирование на Index.html
+      historyApiFallback: true,
+      hot: true
+    }
+  }
+}
