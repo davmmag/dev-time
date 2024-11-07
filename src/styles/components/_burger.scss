@@ -1,0 +1,54 @@
+.burger-btn {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+  padding-right: 5px;
+  display: none;
+}
+
+.burger-btn__line {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.burger-btn__line span,
+.burger-btn__line span::before,
+.burger-btn__line span::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 51%;
+  margin-left: -27px;
+  width: 53px;
+  height: 2px;
+  background-color: var(--clr-dark);
+}
+
+.burger-btn__line span::before,
+.burger-btn__line span::after {
+  content: "";
+  display: block;
+  transition: 0.5s;
+}
+
+.burger-btn__line span::before {
+  transform: translateY(-11px);
+}
+
+.burger-btn__line span::after {
+  transform: translateY(11px);
+}
+
+.burger-btn__line__active span {
+  height: 0;
+}
+
+.burger-btn__line__active span::before {
+  transform: rotate(45deg);
+}
+
+.burger-btn__line__active span::after {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-f);
+  font-size: var(--size);
+}
+
+body {
+  position: relative;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.head-1,
+.head-2,
+.head-3,
+.head-4,
+.action-big .action-small,
+.slider-text {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.head-1 {
+  font-size: var(--header-1-size);
+  line-height: 1.5;
+  letter-spacing: 18%;
+}
+
+.head-2 {
+  font-size: var(--header-2-size);
+  line-height: 1.52;
+  letter-spacing: 16%;
+}
+
+.head-3 {
+  font-size: var(--header-3-size);
+  line-height: 1.52;
+  letter-spacing: 8%;
+}
+
+.head-4 {
+  font-size: var(--header-4-size);
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+.text {
+  font-size: var(--t-size);
+  font-weight: 400;
+  line-height: 1.48;
+}
+
+.action-big {
+  font-size: var(--action-big);
+  line-height: 1.52;
+  letter-spacing: 16%;
+}
+
+.action-small {
+  font-size: var(--action-sm);
+  line-height: 1.3;
+  letter-spacing: 5%;
+}
+
+.caption {
+  font-family: "Allura", cursive;
+  font-size: var(--caption-size);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 5%;
+}
+
+.slider-text {
+  font-size: var(--slider-text);
+}
+
+.container {
+  max-width: calc(var(--container-size) + (var(--p-container) * 2));
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--p-container);
+}
