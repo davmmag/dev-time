@@ -34,19 +34,19 @@ img {
 .head-1 {
   font-size: var(--header-1-size);
   line-height: 1.5;
-  letter-spacing: 18%;
+  letter-spacing: 6px;
 }
 
 .head-2 {
   font-size: var(--header-2-size);
   line-height: 1.52;
-  letter-spacing: 16%;
+  letter-spacing: 1px;
 }
 
 .head-3 {
   font-size: var(--header-3-size);
   line-height: 1.52;
-  letter-spacing: 8%;
+  letter-spacing: 1px;
 }
 
 .head-4 {
@@ -78,7 +78,7 @@ img {
   font-size: var(--caption-size);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: 5%;
+  letter-spacing: 1px;
 }
 
 .slider-text {

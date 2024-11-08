@@ -1,8 +1,10 @@
 @use './variables.scss';
 @use './config.scss';
 
+@use './components/buttons';
 @use './components/logo';
 @use './components/menu';
 @use './components/burger';
 @use './components/header';
+@use './components/hero';
 

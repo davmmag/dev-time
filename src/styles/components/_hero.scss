@@ -1,0 +1,35 @@
+.hero {
+  background-image: url(../assets/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    width: 433px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__caption {
+    color: var(--clr-white);
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    color: var(--clr-white);
+    margin-bottom: 13px;
+  }
+
+  &__btn {
+    margin-bottom: 12px;
+  }
+}
