@@ -85,9 +85,21 @@ img {
   font-size: var(--slider-text);
 }
 
+.white {
+  color: var(--clr-white);
+}
+
+.dark {
+  color: var(--clr-dark);
+}
+
+.primary {
+  color: var(--clr-primary);
+}
+
 .container {
   max-width: calc(var(--container-size) + (var(--p-container) * 2));
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--p-container);
+  padding: 60px var(--p-container);
 }

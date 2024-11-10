@@ -1,0 +1,51 @@
+$layout-medium: 768px;
+$layout-large: 1440px;
+
+.gifts {
+  background-color: red;
+  &__container {
+
+  }
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &__title,
+  &__caption {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__caption {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: $layout-medium) {
+  .gifts {
+    &__list {
+      grid-template-columns: repeat(2, 310px);
+    }
+  }
+} 
+
+@media screen and (min-width: $layout-large) {
+  .gifts {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &__container {
+
+    }
+
+    &__description {
+
+    }
+  }
+}

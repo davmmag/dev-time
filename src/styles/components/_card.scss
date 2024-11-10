@@ -1,0 +1,49 @@
+.card {
+  background-color: gray;
+  border-radius: 20px;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: auto 112px;
+  width: 310px;
+  transition: all .3s ease-in-out;
+  
+  &__image {
+    height: 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.work {
+      background-image: url(../assets/card-work.png);
+    }
+    &.health {
+      background-image: url(../assets/card-health.png);
+    }
+    &.harmony {
+      background-image: url(../assets/card-harmony.png);
+    }
+  }
+
+  &__description {
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    padding: 20px 0 0 20px; 
+  }
+
+  &__category {
+    margin-bottom: 8px;
+
+    &--work {
+      color: var(--clr-purple);
+    }
+    &--health {
+      color: var(--clr-green);
+    }
+    &--harmony {
+      color: var(--clr-pink);
+    }
+  }
+
+  &:hover &__title {
+    color: var(--clr-primary);
+  }
+}

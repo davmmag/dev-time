@@ -4,7 +4,7 @@
   --clr-dark: #181C29;
   --clr-white: #ffffff;
   --clr-white-4: rgba(255, 255, 255, 0.4);
-  --clr-white-4: rgba(255, 255, 255, 0.2);
+  --clr-white-2: rgba(255, 255, 255, 0.2);
   --clr-purple: #4361FF;
   --clr-pink: #FF43F7;
   --clr-green: #06A44F;
@@ -26,3 +26,6 @@
   --caption-size: 2.4rem;
   --slider-text: 8rem;
 }
+
+$layout-medium: 769px;
+$layout-large: 1440px;
