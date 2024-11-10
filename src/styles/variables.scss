@@ -1,4 +1,6 @@
 :root {
+  $layout-medium: 769px;
+  $layout-large: 1440px;
   --clr-primary: #FF4646;
   --clr-primary-1: rgba(255, 70, 70, 0.1);
   --clr-dark: #181C29;
@@ -25,7 +27,8 @@
   --action-sm: 1.2rem;
   --caption-size: 2.4rem;
   --slider-text: 8rem;
-}
 
-$layout-medium: 769px;
-$layout-large: 1440px;
+  @media screen and (min-width: $layout-medium) {
+      --p-container: 8px;
+  }
+}

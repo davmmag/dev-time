@@ -1,0 +1,28 @@
+.cta-section {
+  background-color: var(--clr-primary);
+
+  &__container {
+    padding-top: 120px;
+  }
+
+  &__content {
+    max-width: 426px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+
+  &__title,
+  &__btn {
+    margin-bottom: 18px;
+  }
+
+  &__caption {
+    margin-bottom: 11px;
+  }
+
+  &__timer {
+    margin: 0 auto;
+  }
+}

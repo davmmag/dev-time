@@ -1,0 +1,9 @@
+.timer {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  height: 72px;
+  background-color: var(--clr-white-4);
+  padding: 8px 12px 12px;
+  width: fit-content;
+  border-radius: 20px;
+}

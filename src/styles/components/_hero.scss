@@ -1,15 +1,13 @@
 .hero {
-  background-image: url(../assets/bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--clr-primary);
 
   &__container {
-    padding-top: 60px;
-    padding-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../assets/bg-ball.png), url(../assets/bg-snow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   &__content {
@@ -20,7 +18,7 @@
   }
 
   &__caption {
-    margin-bottom: 8px;
+    margin-bottom: 11px;
   }
 
   &__title {

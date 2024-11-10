@@ -1,0 +1,14 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  grid-template-rows: 204px;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--clr-white);
+  border-radius: 20px;
+
+  &__item {
+    background-color: #ECF3F8;
+    border-radius: 20px;
+  }
+}

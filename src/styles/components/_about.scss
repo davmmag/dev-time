@@ -2,12 +2,10 @@ $layout-medium: 768px;
 $layout-large: 1440px;
 
 .about {
-  &__container {
-    --p-container: 8px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    border-radius: 20px;
+  background-color: var(--clr-primary);
 
+  &__container {
+    border-radius: 20px;
     display: grid;
     grid-template-rows: 352px 528px;
   }
@@ -23,7 +21,6 @@ $layout-large: 1440px;
     border-radius: 20px;
     background-image: url(../assets/santa.png);
     background-size: cover;
-
     background-repeat: no-repeat;
   }
 
@@ -53,11 +50,6 @@ $layout-large: 1440px;
 
 @media screen and (min-width: $layout-large) {
   .about {
-    &__container {
-      --p-container: 82px;
-      
-    }
-
     &__description {
       padding: 100px 0 100px 60px;
       max-width: 486px;

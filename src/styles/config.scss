@@ -1,3 +1,6 @@
+$layout-medium: 768px;
+$layout-large: 1440px;
+
 *,
 *::before,
 *::after {
@@ -40,13 +43,13 @@ img {
 .head-2 {
   font-size: var(--header-2-size);
   line-height: 1.52;
-  letter-spacing: 1px;
+  letter-spacing: 3.9px;
 }
 
 .head-3 {
   font-size: var(--header-3-size);
   line-height: 1.52;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
 }
 
 .head-4 {
@@ -102,4 +105,10 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 60px var(--p-container);
+}
+
+@media screen and (min-width: $layout-medium) {
+  .container {
+    --p-container: 8px;
+  }
 }

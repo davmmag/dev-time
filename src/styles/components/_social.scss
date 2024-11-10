@@ -1,0 +1,6 @@
+.social {
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  gap: 12px;
+  width: fit-content;
+}

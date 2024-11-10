@@ -11,15 +11,16 @@
     height: 230px;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 
     &.work {
-      background-image: url(../assets/card-work.png);
+      background-image: url(../assets/gift-for-work.png);
     }
     &.health {
-      background-image: url(../assets/card-health.png);
+      background-image: url(../assets/gift-for-health.png);
     }
     &.harmony {
-      background-image: url(../assets/card-harmony.png);
+      background-image: url(../assets/gift-for-harmony.png);
     }
   }
 
