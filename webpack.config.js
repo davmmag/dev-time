@@ -11,6 +11,19 @@ module.exports = (env) => {
   const imageminPlugin = {
 
   }
+  const babelLoader = {
+    test: /\.(?:js|mjs|cjs)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        targets: "defaults",
+        presets: [
+          ['@babel/preset-env']
+        ]
+      }
+    }
+  }
 
   const assetLoader = {
     test: /\.(png|jpg|jpeg|gif)$/i,
@@ -46,6 +59,7 @@ module.exports = (env) => {
       rules: [
         scssLoader,
         assetLoader,
+        babelLoader
       ]
     },
     
