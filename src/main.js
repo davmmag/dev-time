@@ -51,3 +51,76 @@ SLIDER__CONTROLS.addEventListener('click', (e) => {
     startSlider(true, SLIDER__CONTAINER);
   }
 })
+
+
+// Cards
+// Получить данные
+// Обработать данные
+// функция создания блока
+// 
+let URL = './json/gifts.json';
+// const getData = async (address) => {
+//   try {
+//     const response = await fetch(address);
+    
+//     if (response.ok) {
+//       return response;
+//     }
+//   } catch(err) {
+//     console.log(err);
+//   }
+// };
+
+
+// getData(cardsAddress).then(data => (data.json());
+
+const getCards = async (url) => {
+  try {
+    const RESPONSE = await fetch(url);
+    if (RESPONSE.ok) {
+      let data = await RESPONSE.json();
+      return data;
+    }
+  } catch (e) {
+    console.log(e)
+  }
+};
+
+// const DATA = getCards(URL);
+// DATA.then(data => console.log(data))
+const cardImage = {
+  health: '',
+  harmony: '',
+  health: '',
+}
+
+const createElement = (className, type = 'div', text) => {
+  const element = document.createElement(type);
+  element.className = className;
+  if (text) element.textContent = text;
+  return element;
+}
+
+const createCardImg = () => {
+
+}
+
+const createCard = (data) => {
+  const { name, description, category, superpowers } = data;
+  const card = createElement('card');
+  const categoryElement = createElement('card__category', 'p', category);
+  const nameElement = createElement('card__title', 'h3', name);
+  const imgElement = createElement('');
+  card.append(categoryElement, nameElement);
+  return card;
+};
+
+const createCardList = (data) => {
+  const cardList = document.querySelector('[data-card-list]');
+  
+  for (const item of data) {
+    cardList.append(createCard(item))
+  }
+}
+
+getCards(URL).then(data => createCardList(data));

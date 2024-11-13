@@ -71,6 +71,7 @@ module.exports = (env) => {
       new CopyPlugin({
         patterns: [
           { from: path.resolve(__dirname, 'src', 'assets'), to: path.resolve('build', 'assets') },
+          { from: path.resolve(__dirname, 'src', 'json'), to: path.resolve('build', 'json') },
         ],
       }),
     ],
